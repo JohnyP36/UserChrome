@@ -74,9 +74,8 @@
   }
   findbar::before {
     content:"";
-    display: -moz-box;
+    display: flex;
     position: relative;
-    flex: 100;
-    -moz-box-flex: 100;
+    flex: 0.4;
   }
 }

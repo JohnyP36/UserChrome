@@ -1,7 +1,7 @@
 /* EXTENSION POPUP *******************************************************************/
 popupset#mainPopupSet > panel.browser-extension-panel,
 toolbar#nav-bar.browser-toolbar > panel#customizationui-widget-panel.cui-widget-panel[viewId^="PanelUI-webext-"][viewId$="BAV"] {
-  transform: scale(80%) !important;
+  transform: scale(90%) !important;
   transform-origin: top right !important;
 }
 /* Overflow Menu */

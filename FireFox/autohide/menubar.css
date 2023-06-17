@@ -6,6 +6,7 @@
       display: flex;
       position: fixed;
       z-index: 6;
+    }
   }
   :root:not([chromehidden~="menubar"], [inFullscreen]) 
     #toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > .titlebar-buttonbox-container {
@@ -45,6 +46,6 @@
   }
   /* :root:not([chromehidden~="menubar"], [inFullscreen])
     #toolbar-menubar[autohide="false"] + #TabsToolbar > :is(.titlebar-buttonbox-container, .titlebar-spacer) {
-      display: -moz-box !important;
+      display: flex !important;
   } */
 }

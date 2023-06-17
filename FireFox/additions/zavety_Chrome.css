@@ -3,7 +3,9 @@
   /* #appMenu-extensions-themes-button, */
   #main-menubar menuitem#menu_importFromAnotherBrowser,
   #main-menubar menuitem#menu_importFromAnotherBrowser + menuseparator,
+  hbox#pageAction-urlbar-idjohnyp_example_net,
   toolbaritem#_windscribeff-browser-action,
+  toolbaritem#_63d150c4-394c-4275-bc32-c464e76a891c_-browser-action,
   toolbaritem#_uextra-browser-action,
   toolbarbutton#unified-extensions-button,
   #nav-bar:not([overflowing="true"]) toolbarbutton#nav-bar-overflow-button,
@@ -35,36 +37,5 @@
     window#commonDialogWindow[title^="Wachtwoord vereist"] {
       display: none;
     }
-  }
-  html[id="main-window"]:not([customizing="true"]) #nav-bar[nonemptyoverflow="true"] :has(toolbarbutton[cui-areatype="toolbar"]) + #nav-bar-overflow-button,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar :has(toolbarbutton[cui-areatype="toolbar"]) + #unified-extensions-button,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target 
-    > toolbarbutton[cui-areatype="toolbar"],
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target 
-    > toolbarbutton[cui-areatype="toolbar"] + toolbaritem,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target 
-    > toolbarbutton[cui-areatype="toolbar"] + toolbaritem + toolbaritem,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target 
-    > toolbarbutton[cui-areatype="toolbar"] + toolbaritem + toolbaritem + toolbaritem,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target 
-    > toolbarbutton[cui-areatype="toolbar"] + toolbaritem + toolbaritem + toolbaritem + toolbaritem,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar :has(toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"], #downloads-button) 
-    + toolbarbutton[cui-areatype="toolbar"]) + #unified-extensions-button,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target:has(toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"], #downloads-button) 
-    + toolbarbutton[cui-areatype="toolbar"]) > toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]) 
-    + toolbarbutton[cui-areatype="toolbar"],
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target:has(toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"], #downloads-button) 
-    + toolbarbutton[cui-areatype="toolbar"]) > toolbarbutton[cui-areatype="toolbar"],
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target:has(toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"], #downloads-button) 
-    + toolbarbutton[cui-areatype="toolbar"]) > toolbarbutton[cui-areatype="toolbar"] + toolbaritem,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target:has(toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"], #downloads-button) 
-    + toolbarbutton[cui-areatype="toolbar"]) > toolbarbutton[cui-areatype="toolbar"] + toolbaritem + toolbaritem ,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target:has(toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"], #downloads-button) 
-    + toolbarbutton[cui-areatype="toolbar"]) > toolbarbutton[cui-areatype="toolbar"] + toolbaritem + toolbaritem + toolbaritem,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar #nav-bar-customization-target:has(toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"], #downloads-button) 
-    + toolbarbutton[cui-areatype="toolbar"]) > toolbarbutton[cui-areatype="toolbar"] + toolbaritem + toolbaritem + toolbaritem + toolbaritem,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar[unifiedextensionsbuttonshown="true"][overflowing="true"] #nav-bar-overflow-button,
-  html[id="main-window"]:not([customizing="true"]) #nav-bar[unifiedextensionsbuttonshown="true"][overflowing="true"] #unified-extensions-button {
-    transform: none !important;
   }
 }

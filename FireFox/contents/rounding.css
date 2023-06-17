@@ -34,7 +34,7 @@
       border-radius: 0 !important;
     }
   }
-  @-moz-document regexp(".*.pdf$") {
+@-moz-document regexp(".*.pdf$") {
     .toolbarButton,
     .dropdownToolbarButton,
     .secondaryToolbarButton,
@@ -55,7 +55,7 @@
       border-radius: 0 !important;
     }
   }
-  @-moz-document regexp(".*.pdf$") {
+@-moz-document regexp(".*.pdf$") {
     dialog {
       border-radius: 0 !important;
     }
@@ -99,7 +99,7 @@
       border-radius: 0 !important;
     }
   }
-  @-moz-document regexp(".*.pdf$") {
+@-moz-document regexp(".*.pdf$") {
     .toolbarField,
     .thumbnailSelectionRing {
       border-radius: 0 !important;
@@ -129,13 +129,13 @@
       border-radius: 0 !important;
     }
   }
-  @-moz-document regexp(".*.pdf$") {
+}
+@-moz-document regexp(".*.pdf$") {
     .doorHanger,
     .doorHangerRight {
       border-radius: 0 !important;
     }
   }
-}
 @supports -moz-bool-pref("userChrome+Content.rounding.square_infobox") {
   @-moz-document url-prefix("about:"), regexp("^chrome://\\w+/content/.*.xhtml$") {
     /*
