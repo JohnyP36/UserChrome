@@ -1,4 +1,4 @@
-/*= Private Theme Mode ==============================================================*/
+/*= Private Mode ====================================================================*/
 @supports -moz-bool-pref("userChrome+Content.theme.private_mode") {
   :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme),
   :root[privatebrowsingmode=temporary][lwt-default-theme-in-dark-mode="true"] {
@@ -138,6 +138,7 @@
     --card-outline-color: var(--grey-60);
     --card-shadow-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color);
   }
+
   :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme)
     .tabbrowser-tab .tab-icon-image,
   :root[privatebrowsingmode=temporary][lwt-default-theme-in-dark-mode="true"]

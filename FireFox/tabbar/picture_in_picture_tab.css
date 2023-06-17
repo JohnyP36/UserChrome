@@ -1,4 +1,4 @@
-/*= PictureInPicture Tab - Show PIP Icon ============================================*/
+/*= PictureInPicture Tab - Show PIP Icon ============================= I'VE CHANGED =*/
 #tabbrowser-tabs:not([closebuttons="activetab"]) .tabbrowser-tab[pictureinpicture]:not([pinned]) .tab-content::after,
 #tabbrowser-tabs[closebuttons="activetab"]
   .tabbrowser-tab[pictureinpicture]:not([pinned], :hover)
@@ -7,7 +7,7 @@
 }
 .tabbrowser-tab[pictureinpicture]:not([pinned]) .tab-content::after {
   /* Shape */
-  display: -moz-inline-box !important;
+  display: inline-flex !important;
   width: 14px;
   height: 14px;
   background-size: 14px;

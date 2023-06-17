@@ -53,6 +53,10 @@
   }
 }
 @supports -moz-bool-pref("userChrome+Content.rounding.square_menupopup") {
+  :root {
+    --panel-border-radius: 0 !important;
+    --arrowpanel-border-radius: 0 !important;
+  }
   xul|menupopup {
     --panel-border-radius: 0px !important;
     border-radius: 0 !important;
@@ -94,9 +98,27 @@
   #searchbar {
     --toolbarbutton-border-radius: 0;
   }
-}
+  }
 @supports -moz-bool-pref("userChrome+Content.rounding.square_checklabel") {
   input[type="checkbox"],
+  .checkbox-check {
+    border-radius: 0 !important;
+  }
+}
+/*= Library ============================================================*/
+@supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+  #placesToolbar > toolbarbutton,
+  #placesMenu > menu,
+  #editBookmarkPanelRows .expander-up,
+  #editBookmarkPanelRows .expander-down {
+    border-radius: 0 !important;
+  }
+}
+@supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+  #searchFilter,
+  #detailsPane html|input,
+  #places input #editBMPanel_tagsSelectorRow > richlistbox {}
+@supports -moz-bool-pref("userChrome+Content.rounding.square_checklabel") {
   .checkbox-check {
     border-radius: 0 !important;
   }

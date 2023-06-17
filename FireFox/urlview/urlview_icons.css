@@ -22,12 +22,15 @@
  }
 }
 @supports -moz-bool-pref("userChrome+Content.theme.private_mode") {
-  :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) .urlbarView-favicon[src="page-icon:chrome://global/"],
-  :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) .urlbarView-favicon[src="chrome://global/skin/icons/defaultFavicon.svg"] {
-    fill: transparent !important;
-    background-image: url("./../images/globe-light.svg") !important;
-    background-position: center;
-    background-repeat: no-repeat;
+  :root:is([privatebrowsingmode=temporary])[lwt-default-theme-in-dark-mode="true"])
+    .urlbarView-favicon[src="page-icon:chrome://global/"],
+  :root:is([privatebrowsingmode=temporary])[lwt-default-theme-in-dark-mode="true"])
+    .urlbarView-favicon[src="chrome://global/skin/icons/defaultFavicon.svg"] {
+      fill: transparent !important;
+      background-image: url("./../images/globe-light.svg") !important;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
 }
 #identity-icon {
