@@ -46,3 +46,7 @@
       transition: opacity 0.2s var(--animation-easing-function);
   }
 }
+#identity-box[pageproxystate="valid"].notSecureText > #identity-permission-box,
+#identity-box[pageproxystate="valid"].notSecureText > #notification-popup-box {
+  margin-inline-end: -5px;
+}

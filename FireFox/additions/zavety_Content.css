@@ -75,7 +75,7 @@
     .tabButton[data-pane="shortcuts.html"],
     .body > div[class="a b c d"],
     div#lists > .groupEntry[data-groupkey="user"],
-    div#lists > .groupEntry[data-groupkey="regions"] .listEntry[data-listkey="NLD-0"] a:is(.content, .support),
+    div#lists > .groupEntry[data-groupkey="regions"] .listEntry[data-listkey="NLD-0"] a.support,
     div#lists > .groupEntry[data-groupkey="custom"] > .listEntries > .listEntry[data-listkey^="https://raw.githubusercontent.com/"] {
       display: none !important;
       visibility: hidden !important;
