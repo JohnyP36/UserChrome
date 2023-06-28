@@ -29,10 +29,10 @@
     transform: translateY(-30px);
   }
   findbar > .findbar-container {
-    margin-left: 400px !important;
+    margin-left: 365px !important;
   }
   findbar > .findbar-container:has(.found-matches[hidden="true"]) {
-    margin-left: 475px !important;
+    margin-left: 390px !important; /*was 475*/
   }
   findbar > .findbar-container,
   findbar > .close-icon,
