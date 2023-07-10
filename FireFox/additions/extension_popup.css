@@ -35,3 +35,9 @@ panelmultiview[mainViewId="unified-extensions-view"] panelview {
 panelmultiview[mainViewId="unified-extensions-view"] panelview .unified-extensions-item:last-child {
   margin-bottom: var(--arrowpanel-menuitem-margin-inline) !important;
 }
+panelmultiview[mainViewId="unified-extensions-view"] panelview toolbaritem {
+  margin-block: -2px !important;
+}
+.unified-extensions-item-name {
+  padding-inline-start: 0.25em !important;
+}
