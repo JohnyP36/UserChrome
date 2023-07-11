@@ -39,5 +39,9 @@ panelmultiview[mainViewId="unified-extensions-view"] panelview toolbaritem {
   margin-block: -2px !important;
 }
 .unified-extensions-item-name {
-  padding-inline-start: 0.25em !important;
+  padding-inline-start: 0.125em !important;
+}
+.unified-extensions-item > .subviewbutton {
+  margin-left: -3px !important;
+  margin-right: -3px !important;
 }
