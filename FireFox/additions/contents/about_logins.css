@@ -1,10 +1,14 @@
 /* About_Logins **************************************************************/
-@-moz-document url("about:logins") {
-/*  login-list:not(:hover) {
-    width: 40%;
+@-moz-document url("about:logins"),
+               url-prefix("about:logins") {
+  /* login-list:not(:hover) {
+    width: 75%;
     scrollbar-width: none;
+  } */
+  login-list {
+    width: 85%;
   }
-  [role="listbox"][data-l10n-id="login-list"] {
+  /* [role="listbox"][data-l10n-id="login-list"] {
     scrollbar-width: none;
   } */
   .login-list-item {
@@ -17,9 +21,12 @@
   input[type="text"]:read-only:not(:hover) {
     visibility: hidden !important;
   } */
-  input.password-display
+  input.password-display,
   input[name="password"][readonly] {
     width: 250px !important;
+  }
+  .timeline {
+    display: none !important;
   }
   .delete-button {
     background-image: url("./../../images/delete.svg") !important;
