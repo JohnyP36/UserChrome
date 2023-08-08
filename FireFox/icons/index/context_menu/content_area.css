@@ -166,6 +166,9 @@ richlistitem[originaltype="insecureWarning"] > .ac-site-icon {
 richlistitem[originaltype="loginsFooter"] .ac-site-icon {
   list-style-image: url("./../../../images/key-multiple.svg") !important;
 }
+richlistitem > .ac-login-item > .ac-settings-button {
+  background-image: url("./../../../images/settings.svg") !important;
+}
 #context-undo {
   --menuitem-image: url("./../images/undo.svg");
 }

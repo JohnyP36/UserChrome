@@ -22,10 +22,13 @@
   /* Toolbar seperator line - does create false positives
   :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]),
   :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) 
-    toolbaritem#PanelUI-button::before {
-      top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
-      height: calc(var(--urlbar-toolbar-height) / 2.5) !important;
-      background-color: rgb(126, 153, 168) !important; 
+    html[id="main-window"][chromehidden=""] #nav-bar:has(#nav-bar-customization-target
+      toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]):nth-last-child(2), 
+      toolbaritem[cui-areatype="toolbar"]:not([hidden="true"], #urlbar-container):nth-last-child(1))
+      #PanelUI-button::after {
+        top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
+        height: calc(var(--urlbar-toolbar-height) / 2.5) !important;
+        background-color: rgb(126, 153, 168) !important;
   } */
 
   /* Color of right mouse and other popup menu's  (counter toolbarbutton color) --> needed to change fully_color.css */

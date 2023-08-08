@@ -1,7 +1,7 @@
 /* uBlock Origin *********************************************************************/
 @-moz-document url-prefix("moz-extension://48257024-52cf-4295-81fc-991effeb0c07") {
   @supports -moz-bool-pref("userChrome+Content.additions.uBlock_Origin.hide_default_unused") {
-    body div#lists > .listEntries > .listEntry.expandable:not(.expanded) > .listEntries > .listEntry.isDefault:not(.checked):not(div[data-key="user-filters"]) {
+    body div#lists > .listEntries > .listEntry.expandable:not(.expanded, [data-key="user"]) > .listEntries > .listEntry.isDefault:not(.checked):not(div[data-key="user-filters"]) {
       display: none !important;
     }
   }

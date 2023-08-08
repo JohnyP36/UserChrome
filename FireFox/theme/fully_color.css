@@ -19,8 +19,8 @@
   }
   :is(html#main-window, window:is(#places, #bookmarksPanel, #history-panel))
     menupopup:not(.in-menulist):not([placespopup]) menuseparator,
-  :is(html#main-window menupopup:not(.in-menulist):not([placespopup]))
-    menuseparator::before,
+  :is(html#main-window, window:is(#places, #bookmarksPanel, #history-panel))
+    menupopup:not(.in-menulist):not([placespopup]) menuseparator::before,
   :is(html#main-window, window:is(#places, #bookmarksPanel, #history-panel))
     menupopup:not(.in-menulist)[placespopup] menuseparator::before {
       border-color: var(--menu-border-color);
