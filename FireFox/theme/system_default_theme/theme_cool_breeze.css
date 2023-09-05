@@ -1,7 +1,10 @@
 @supports -moz-bool-pref("userChrome+Content.theme.theme_cool_breeze") {
+  :root:is(#main-window):not(:-moz-lwtheme, [privatebrowsingmode=temporary]),
+  :root[lwt-default-theme-in-dark-mode]:is(#main-window):not([privatebrowsingmode=temporary]) {
+    --win-component-bgcolor: rgb(163, 198, 218) !important;
+  }
   :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]),
   :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) {
-    --win-component-bgcolor: rgb(163, 198, 218) !important;
     --urlbar-box-hover-bgcolor: rgb(182, 200, 211) !important;
     --urlbar-box-active-bgcolor: rgb(153, 168, 177) !important;
     --win-toolbarbutton-hover-background: rgb(150, 182, 201) !important;
