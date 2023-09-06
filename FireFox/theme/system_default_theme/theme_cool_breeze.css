@@ -12,6 +12,9 @@
     --toolbar-field-background-color: rgb(202, 222, 234) !important;
     --toolbarseparator-color: rgb(47, 77, 94) !important;
   }
+  :root:is(#main-window):not(:-moz-lwtheme, [privatebrowsingmode=temporary]) #navigator-toolbox {
+    border-bottom: 1px solid rgb(126, 153, 168) !important;
+  }
   :root[tabsintitlebar]:not(:-moz-window-inactive, :-moz-lwtheme, [privatebrowsingmode=temporary]) .titlebar-color,
   :root[tabsintitlebar][lwt-default-theme-in-dark-mode]:not(:-moz-window-inactive, [privatebrowsingmode=temporary]) .titlebar-color {
     color: AccentColorText;
@@ -22,17 +25,15 @@
     background-color: rgb(96, 157, 191) !important; 
   }
 
-  /* Toolbar seperator line - does create false positives
-  :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]),
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) 
-    html[id="main-window"][chromehidden=""] #nav-bar:has(#nav-bar-customization-target
-      toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]):nth-last-child(2), 
-      toolbaritem[cui-areatype="toolbar"]:not([hidden="true"], #urlbar-container):nth-last-child(1))
-      #PanelUI-button::after {
+  /* Toolbar seperator line */
+  :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary])
+    #nav-bar:has(#nav-bar-customization-target toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]):nth-last-child(2), 
+    toolbaritem[cui-areatype="toolbar"]:not([hidden="true"], #urlbar-container):nth-last-child(1)) 
+    #PanelUI-button::after {
         top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
-        height: calc(var(--urlbar-toolbar-height) / 2.5) !important;
+        height: calc(var(--urlbar-toolbar-height) / 2.25) !important;
         background-color: rgb(126, 153, 168) !important;
-  } */
+  }
 
   /* Color of right mouse and other popup menu's  (counter toolbarbutton color) --> needed to change fully_color.css */
   /* :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) html#main-window menupopup:not(.in-menulist) {
@@ -139,6 +140,12 @@
   #nav-bar-customization-target .toolbaritem-combined-buttons.unified-extensions-item > toolbarbutton:hover {
     background-color: rgb(150, 182, 201) !important; /* var(--panel-item-hover-bgcolor) */
   }
+  /* Hover in sidebar */
+  :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary], [lwt-default-theme-in-dark-mode]) #sidebar-switcher-target:hover, 
+  :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary], [lwt-default-theme-in-dark-mode]) #sidebar-switcher-target:hover:active,
+  :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary], [lwt-default-theme-in-dark-mode]) #sidebar-switcher-target.active {
+    background-color: rgb(229, 229, 229) !important;
+  }
 
 
   /* Fixes for system dark theme */
@@ -175,6 +182,10 @@
 
 
   /* Fixes for Private browsing */
+  :root[lwt-default-theme-in-dark-mode] #navigator-toolbox, 
+  :root[privatebrowsingmode=temporary] #navigator-toolbox {
+    border-bottom: 1px solid rgb(104, 104, 104) !important;
+  }
   :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]) .tab-icon-image,
   :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]) {
     color: black !important;
@@ -184,5 +195,13 @@
   }
   :root[privatebrowsingmode=temporary] #TabsToolbar #tabs-newtab-button > .toolbarbutton-icon {
     color: black !important; 
+  }
+  :root[privatebrowsingmode=temporary] 
+    #nav-bar:has(#nav-bar-customization-target toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]):nth-last-child(2), 
+    toolbaritem[cui-areatype="toolbar"]:not([hidden="true"], #urlbar-container):nth-last-child(1)) 
+    #PanelUI-button::after {
+        top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
+        height: calc(var(--urlbar-toolbar-height) / 2.25) !important;
+        background-color: rgb(91, 91, 91) !important;
   }
 }
