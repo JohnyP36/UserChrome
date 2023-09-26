@@ -18,4 +18,7 @@
   #downloadsListBox .download-state:not([exists], [state="0"]) .downloadTypeIcon {
     filter: grayscale(100%) !important;
   }
+  #downloadsListBox > richlistitem {
+    min-height: max(36px, calc(16px + 2em)) !important;
+  }
 }
