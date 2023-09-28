@@ -8,6 +8,10 @@
       --panelui-subview-transition-duration: 150ms;
       --autocomplete-popup-highlight-background: SelectedItem;
       --autocomplete-popup-highlight-color: SelectedItemText;
+      --arrowpanel-border-color: rgb(0, 0, 128) !important; /* var(--win-toolbarbutton-border-color) */
+      --arrowpanel-border-radius: 0px !important;
+      --panel-border-color: var(--arrowpanel-border-color) !important;
+      --button-border-radius: 0 !important;
       --button-color: var(--lwt-text-color) !important;
       --button-bgcolor: var(--win-theme-color) !important;
       --button-hover-bgcolor: rgb(229, 241, 251) !important; /* var(--win-menuitem-hover-background-color) */
