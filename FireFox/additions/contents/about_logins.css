@@ -8,13 +8,13 @@
   login-list {
     width: 85%;
   }
-  /* [role="listbox"][data-l10n-id="login-list"] {
-    scrollbar-width: none;
-  } */
-  .login-list-item {
+  [role="listbox"][data-l10n-id="login-list"] {
+    scrollbar-width: thin;
+  }
+  .list-item {
     padding-block: 0px !important;
   }
-  .username {
+  .labels > span.subtitle {
     display: none !important; 
   }
   /* input[type="password"]:read-only:not(:hover),
@@ -28,8 +28,11 @@
   .timeline {
     display: none !important;
   }
-  .delete-button {
+  /* .delete-button {
     background-image: url("./../../images/delete.svg") !important;
+  } */
+  button.ghost-button > img[src="chrome://global/skin/icons/delete.svg"] {
+    content: url("./../../images/delete.svg") !important;
   }
   .copied-button-text {
     background-image: url("./../../images/check.svg") !important;
