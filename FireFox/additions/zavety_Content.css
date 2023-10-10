@@ -22,9 +22,7 @@
   }
   @-moz-document url("about:logins"),
                  url-prefix("about:logins") {
-    .count[data-l10n-id="login-list-count"] {
-      display: none !important;
-    }
+    .count[data-l10n-id^="login-list"],
     .login-list-section,
     .container:has(.column),
     login-item .header,
@@ -71,12 +69,15 @@
   }
   @-moz-document url-prefix("moz-extension://48257024-52cf-4295-81fc-991effeb0c07") {
     .tabButton[data-pane="1p-filters.html"],
+    .tabButton[data-pane="whitelist.html"],
     .tabButton[data-pane="dyna-rules.html"],
     .tabButton[data-pane="shortcuts.html"],
     .body > div[class="a b c d"],
-    div#lists > .groupEntry[data-groupkey="user"],
-    div#lists > .groupEntry[data-groupkey="regions"] .listEntry[data-listkey="NLD-0"] a.support,
-    div#lists > .groupEntry[data-groupkey="custom"] > .listEntries > .listEntry[data-listkey^="https://raw.githubusercontent.com/"] {
+    div#lists .listEntry[data-key="user"],
+    div#lists .listEntry[data-key="regions"] .listEntry[data-key="NLD-0"] a.support, 
+    div#lists .listEntry[data-key="regions"] .listEntry[data-key="NLD-0"] a.content,
+    div#lists .listEntry[data-key="custom"] > .detailbar > span.nodestats,
+    div#lists .listEntry[data-key="custom"] > .listEntries > .listEntry[data-key^="https://raw.githubusercontent.com/"] {
       display: none !important;
       visibility: hidden !important;
     }
