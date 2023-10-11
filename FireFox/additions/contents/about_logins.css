@@ -28,9 +28,9 @@
   .timeline {
     display: none !important;
   }
-  /* .delete-button {
-    background-image: url("./../../images/delete.svg") !important;
-  } */
+  button.ghost-button > img[src="chrome://global/skin/icons/edit.svg"] {
+    content: url("./../../images/edit.svg") !important;
+  }
   button.ghost-button > img[src="chrome://global/skin/icons/delete.svg"] {
     content: url("./../../images/delete.svg") !important;
   }
