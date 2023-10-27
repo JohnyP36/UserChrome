@@ -149,36 +149,39 @@
 
 
   /* Fixes for system dark theme */
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) {
-    --toolbarbutton-icon-fill: black !important;
-    --lwt-tab-text: black !important;
-  }
-  /* :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) .tab-icon-image { 
-    fill: white !important;
-  } */
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) 
-    .tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-content:not([pinned]) {
+  @media (-moz-platform: windows) and (prefers-color-scheme: dark) {
+    :root:not([privatebrowsingmode=temporary]) {
+      --toolbarbutton-icon-fill: black !important;
+      --lwt-tab-text: black !important;
+    }
+    :root:not([privarebrowsingmode=temporary]) .tab-text.tab-label,
+    :root:not([privarebrowsingmode=temporary]) .tab-close-button,
+    :root:not([privatebrowsingmode=temporary]) 
+      .tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-content:not([pinned]) {
+        color: black !important;
+    }
+    :root:not([privatebrowsingmode=temporary]) .browser-toolbar:not(.titlebar-color),
+    :root:not([privatebrowsingmode=temporary]) #urlbar { 
       color: black !important;
-  }
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) .browser-toolbar:not(.titlebar-color) {
+    }
+    :root:not([privatebrowsingmode=temporary]) #urlbar[breakout][breakout-extend] > #urlbar-input-container,
+    :root:not([privarebrowsingmode=temporary]) #urlbar:is([focused="true"], [open]) > #urlbar-background,
+    :root:not([privatebrowsingmode=temporary]) .urlbarView {
+       background-color: white;
+    }
+    :root:not([privatebrowsingmode=temporary]) .urlbarView-row:not([type="tip"], 
+    :root:not([privatebrowsingmode=temporary]) [type="dynamic"])[selected] > .urlbarView-row-inner, 
+    :root:not([privatebrowsingmode=temporary]) .urlbarView-row-inner[selected] {
+      background-color: white !important;
       color: black !important;
+    }
+    :root:not([privarebrowsingmode=temporary]) .urlbarView-row {
+      &[selected] {
+        background-color: transparent !important;
+      }
+    }
   }
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) #urlbar { 
-    color: black !important;
-  }
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary])
-    #urlbar[breakout][breakout-extend] > #urlbar-input-container {
-     background-color: white;
-  }
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) .urlbarView-row:not([type="tip"], 
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) [type="dynamic"])[selected] > .urlbarView-row-inner, 
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) .urlbarView-row-inner[selected] {
-    background-color: white !important;
-    color: black !important;
-  }
-  :root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary]) .urlbarView {
-    background-color: white !important;
-  }
+  /*:root[lwt-default-theme-in-dark-mode]:not([privatebrowsingmode=temporary])*/
 
 
   /* Fixes for Private browsing */
@@ -186,15 +189,15 @@
   :root[privatebrowsingmode=temporary] #navigator-toolbox {
     border-bottom: 1px solid rgb(104, 104, 104) !important;
   }
+  :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]),
+  :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-content:not([pinned]),
+  :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]) .tab-text.tab-label,
+  :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]) .tab-close-button {
+    color: black !important;
+  }
   :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]) .tab-icon-image,
-  :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]) {
-    color: black !important;
-  }
-  :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-content:not([pinned]) {
-    color: black !important;
-  }
-  :root[privatebrowsingmode=temporary] #TabsToolbar #tabs-newtab-button > .toolbarbutton-icon {
-    color: black !important; 
+  :root[privatebrowsingmode=temporary] #tabs-newtab-button > .toolbarbutton-icon {
+    fill: black !important; 
   }
   :root[privatebrowsingmode=temporary] 
     #nav-bar:has(#nav-bar-customization-target toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]):nth-last-child(2), 
@@ -204,4 +207,36 @@
         height: calc(var(--urlbar-toolbar-height) / 2.25) !important;
         background-color: rgb(91, 91, 91) !important;
   }
+
+  /* Fixes for Private browsing - dark mode*/
+  @media (-moz-platform: windows) and (prefers-color-scheme: dark) { */
+    :root[privatebrowsingmode=temporary] .tabbrowser-tab[selected="true"] .tab-text.tab-label,
+    :root[privatebrowsingmode=temporary] .tabbrowser-tab[selected="true"] .tab-close-button {
+      color: white !important;
+    }
+    :root[privatebrowsingmode=temporary] .tabbrowser-tab:not([selected="true"]) .tab-icon-image {
+      fill: black !important;
+    }
+    :root[privatebrowsingmode=temporary] #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+       background-color: black !important;
+    }
+    :root[privatebrowsingmode=temporary] .urlbarView-row:not([type="tip"], 
+    :root[privatebrowsingmode=temporary] [type="dynamic"])[selected] > .urlbarView-row-inner, 
+    :root[privatebrowsingmode=temporary] .urlbarView-row-inner[selected] {
+      background-color: black !important;
+      color: white !important;
+    }
+    :root[privarebrowsingmode=temporary] .urlbarView-row {
+      &[selected] {
+        background-color: transparent !important;
+      }
+    }
+    :root[privarebrowsingmode=temporary] #urlbar:is([focused="true"], [open]) > #urlbar-background {
+      background-color: transparent !important;
+    }
+    :root[privatebrowsingmode=temporary] .urlbarView {
+      background-color: black !important;
+    }
+  }
+  /*:root[lwt-default-theme-in-dark-mode][privatebrowsingmode=temporary]*/
 }

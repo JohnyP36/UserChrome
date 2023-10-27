@@ -305,13 +305,13 @@
     toolbarbutton.subviewbutton:not([disabled], [open], :active, #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is(:hover),
   :root[lwt-default-theme-in-dark-mode]
     toolbarbutton.subviewbutton:not([disabled], [open], :active, #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is(:hover) {
-      background-color: var(--panel-item-hover-bgcolor) !important;
+      background-color: var(--panel-banner-item-hover-bgcolor) !important;
   }
   :root:not(:-moz-lwtheme)
     toolbarbutton.subviewbutton:not([disabled], #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is([open], :hover:active),
   :root[lwt-default-theme-in-dark-mode]
     toolbarbutton.subviewbutton:not([disabled], #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is([open], :hover:active) {
-      background-color: var(--panel-item-active-bgcolor) !important;
+      background-color: var(--panel-banner-item-active-bgcolor) !important;
   }
   /*- Others -------------------------------------------------------------*/
   /* For overwrite */
