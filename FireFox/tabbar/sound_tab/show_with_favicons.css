@@ -58,6 +58,9 @@
   tab:not([style^="--soundplaying-removal-delay"]) .tab-icon-overlay[muted] {
     display: none !important;
   }
+  .tabbrowser-tab[muted="true"]:not([style*="--soundplaying-removal-delay: 2700ms;"]) .tab-icon-overlay:not([sharing], [crashed])[muted] {
+    opacity: 0 !important;
+  }
 }
 @supports -moz-bool-pref("userChrome+Content.tab.show_(un)muted_icon_pinned") {
   .tab-icon-stack[pinned]:is([sharing], [soundplaying], [muted]) > .tab-icon-image {
