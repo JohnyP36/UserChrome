@@ -39,6 +39,8 @@
     --win-checkbox-checked-hover-bgcolor: rgb(97, 97, 97);
     --win-checkbox-checked-active-bgcolor: rgb(131, 131, 131);
     --win-urlbar-box-hover-bgcolor: rgb(230, 230, 230);
+    --win-urlbar-popup-accent-color: rgb(0, 85, 215);
+    --win-urlbar-popup-hover-active-bgcolor: rgb(193, 193, 193);
   }
   @supports -moz-bool-pref("userChrome+Content.compatibility.os.win11") {
     :root:not(:-moz-lwtheme) {
@@ -68,8 +70,7 @@
   /* For overwrite */
 }
 @media (-moz-platform: windows) and (prefers-color-scheme: dark) {
-  :root:not(:-moz-lwtheme),
-  :root[lwt-default-theme-in-dark-mode] {
+  :root:not(:-moz-lwtheme) {
     --win-text-color: rgb(255, 255, 255);
     --win-bgcolor: #2b2b2b;
     --win-disabled-color: #747474; /* also button-active-color */
@@ -82,10 +83,11 @@
     --win-tab-separator-color: linear-gradient(to right, color-mix(in srgb, currentColor 35%, currentColor 35%), color-mix(in srgb, currentColor 50%, currentColor 50%));
     --win-sidebar-bgcolor: var(--win-field-bgcolor);
     --win-sidebar-hover-bgcolor: #353535;
-    --win-sidebar-button-hover-bgcolor: var(--win-hover-bgcolor);
-    --win-sidebar-button-hover-active-bgcolor: var(--win-hover-active-bgcolor);
-    --win-button-border: rgb(110, 110, 110); /* #8f8f8f */
-    --win-button-hover-bgcolor: rgb(84, 84, 84); /* rgba(116, 116, 116, 0.66); */
+    --win-sidebar-button-hover-bgcolor: rgb(97, 97, 97);
+    --win-sidebar-button-hover-active-bgcolor: rgb(69, 69, 69);
+    --win-button-border: rgb(110, 110, 110);
+    --win-button-bgcolor: rgb(97, 97, 97);
+    --win-button-hover-bgcolor: rgb(84, 84, 84);
     --win-button-active-bgcolor: rgb(72, 72, 72);
     --win-shortcut-text-color: #adadad;
     --win-error-color: #ffb900;
@@ -107,10 +109,11 @@
     --win-checkbox-checked-hover-bgcolor: rgb(188, 188, 188);
     --win-checkbox-checked-active-bgcolor: rgb(154, 154, 154);
     --win-urlbar-box-hover-bgcolor: rgb(56, 56, 56);
+    --win-urlbar-popup-accent-color: rgb(143, 196, 236);
+    --win-urlbar-popup-hover-active-bgcolor: rgb(69, 69, 69);
   }
   @supports -moz-bool-pref("userChrome+Content.compatibility.os.win11") {
-    :root:not(:-moz-lwtheme),
-    :root[lwt-default-theme-in-dark-mode] {
+    :root:not(:-moz-lwtheme) {
       --win-bgcolor: #202020;
       --win-hover-bgcolor: #383838; /* also button-bgcolor */
       --win-disabled-color: #797979;
@@ -129,11 +132,10 @@
   }
 }
 @media (-moz-platform: windows) {
-  :root:not(:-moz-lwtheme),
-  :root[lwt-default-theme-in-dark-mode] {
+  :root:not(:-moz-lwtheme) {
     /* Buttons */
     --button-color: var(--win-text-color) !important;
-    --button-bgcolor: var(--win-hover-bgcolor); !important; /* var(--win-hover-active-bgcolor) */
+    --button-bgcolor: var(--win-button-bgcolor); !important; /* var(--win-hover-active-bgcolor) */
     --button-hover-bgcolor: var(--win-button-hover-bgcolor) !important;
     --button-active-bgcolor: var(--win-button-active-bgcolor) !important; /* --win-disabled-bgcolor */
     --button-primary-color: var(--win-accent-foreground-color) !important; /* was --win-field-bgcolor (https://github.com/black7375/Firefox-UI-Fix/commit/c5347004393a3d9efe4b51c5eb0d95d8782d162b) */
@@ -235,13 +237,8 @@
     --arrowpanel-border-color: var(--win-bgcolor) !important;
     --panel-separator-color: var(--win-bgcolor) !important;
   }
-  :root[lwt-default-theme-in-dark-mode] {
-    --arrowpanel-border-color: var(--win-border-color) !important;
-    --panel-separator-color: var(--win-border-color) !important;
-  }
   @supports -moz-bool-pref("userChrome+Content.compatibility.os.win11") {
-    :root:not(:-moz-lwtheme),
-    :root[lwt-default-theme-in-dark-mode] {
+    :root:not(:-moz-lwtheme) {
       --chrome-content-separator-color: var(--win11-chrome-separator-color) !important;
     }
     #nav-bar {
@@ -249,8 +246,7 @@
     }
   }
   /*- Menu ---------------------------------------------------------------*/
-  html#main-window menupopup:not(:-moz-lwtheme),
-  :root[lwt-default-theme-in-dark-mode] html#main-window menupopup {
+  html#main-window menupopup:not(:-moz-lwtheme) {
     --menu-color: var(--win-text-color) !important;
     --menu-background-color: var(--win-field-bgcolor) !important;
     --menu-border-color: var(--win-bgcolor) !important;
@@ -259,8 +255,7 @@
     --menuitem-disabled-hover-background-color: var(--win-disabled-bgcolor) !important;
   }
   /*- Toolbar ------------------------------------------------------------*/
-  :root:not(:-moz-lwtheme) #titlebar,
-  :root[lwt-default-theme-in-dark-mode] #titlebar {
+  :root:not(:-moz-lwtheme) #titlebar {
     --button-hover-bgcolor: var(--win-sidebar-button-hover-bgcolor);
     --button-active-bgcolor: var(--win-sidebar-button-hover-active-bgcolor);
     --toolbarbutton-hover-background: var(--win-sidebar-button-hover-bgcolor);
@@ -268,8 +263,7 @@
   }
   /*- Address bar --------------------------------------------------------*/
   @media not (prefers-contrast) {
-    :root:not(:-moz-lwtheme) #urlbar,
-    :root[lwt-default-theme-in-dark-mode] #urlbar {
+    :root:not(:-moz-lwtheme) #urlbar {
       --urlbar-box-bgcolor: var(--toolbar-field-focus-background-color) !important;
     }
   }
@@ -277,8 +271,7 @@
   #sidebar-box:not([lwt-sidebar]) {
     appearance: none !important;
   }
-  :root:not(:-moz-lwtheme) #sidebar-box,
-  :root[lwt-default-theme-in-dark-mode] #sidebar-box {
+  :root:not(:-moz-lwtheme) #sidebar-box {
     --sidebar-background-color: var(--win-sidebar-bgcolor) !important;
     --sidebar-text-color: var(--win-text-color) !important;
     --sidebar-border-color: var(--win-border-color) !important;
@@ -294,23 +287,20 @@
     }
   }
   /*- Panel --------------------------------------------------------------*/
-  :root:not(:-moz-lwtheme)
-    .subviewbutton:not(#appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2),
-  :root[lwt-default-theme-in-dark-mode]
-    .subviewbutton:not(#appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2) {
+  :root:not(:-moz-lwtheme) .subviewbutton {
     --button-hover-bgcolor: var(--win-hover-bgcolor) !important;
     --button-active-bgcolor: var(--win-hover-active-bgcolor) !important;
   }
   :root:not(:-moz-lwtheme) 
     toolbarbutton.subviewbutton:not([disabled], [open], :active, #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is(:hover),
-  :root[lwt-default-theme-in-dark-mode]
-    toolbarbutton.subviewbutton:not([disabled], [open], :active, #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is(:hover) {
+  :root:not(:-moz-lwtheme) 
+    #appMenu-fullscreen-button2:not([disabled], [open], :active):is(:hover) > .toolbarbutton-icon {
       background-color: var(--panel-banner-item-hover-bgcolor) !important;
   }
   :root:not(:-moz-lwtheme)
     toolbarbutton.subviewbutton:not([disabled], #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is([open], :hover:active),
-  :root[lwt-default-theme-in-dark-mode]
-    toolbarbutton.subviewbutton:not([disabled], #appMenu-fxa-label2, #appMenu-zoomReduce-button2, #appMenu-zoomReset-button2, #appMenu-zoomEnlarge-button2, #appMenu-fullscreen-button2):is([open], :hover:active) {
+  :root:not(:-moz-lwtheme) 
+    #appMenu-fullscreen-button2:not([disabled]):is(:hover:active) > .toolbarbutton-icon {
       background-color: var(--panel-banner-item-active-bgcolor) !important;
   }
   /*- Others -------------------------------------------------------------*/
@@ -352,17 +342,14 @@
 /*= Windows10 - Titlebar accent color ================================ I'VE CHANGED =*/
 @media (-moz-platform: windows) and (-moz-windows-accent-color-in-titlebar) {
   /* Tab Bar */
-  :root[tabsintitlebar]:not(:-moz-window-inactive, :-moz-lwtheme) .titlebar-color,
-  :root[tabsintitlebar][lwt-default-theme-in-dark-mode]:not(:-moz-window-inactive) .titlebar-color {
+  :root[tabsintitlebar]:not(:-moz-window-inactive, :-moz-lwtheme) .titlebar-color {
     color: AccentColorText;
     background-color: AccentColor;
   }
-  :root[tabsintitlebar]:-moz-window-inactive:not(:-moz-lwtheme) .titlebar-color,
-  :root[tabsintitlebar][lwt-default-theme-in-dark-mode]:-moz-window-inactive .titlebar-color {
+  :root[tabsintitlebar]:-moz-window-inactive:not(:-moz-lwtheme) .titlebar-color {
     background-color: color-mix(in srgb, AccentColor 70%, white); /* 70% is like Microsoft Edge */ 
   }
-  :root[tabsintitlebar]:not(:-moz-window-inactive, :-moz-lwtheme) .toolbar-items,
-  :root[tabsintitlebar][lwt-default-theme-in-dark-mode]:not(:-moz-window-inactive) .toolbar-items {
+  :root[tabsintitlebar]:not(:-moz-window-inactive, :-moz-lwtheme) .toolbar-items {
     --toolbarbutton-icon-fill: currentColor;
     --toolbarbutton-hover-background: color-mix(in srgb, AccentColorText 10%, transparent);
     --toolbarbutton-active-background: color-mix(in srgb, AccentColorText 15%, transparent);
