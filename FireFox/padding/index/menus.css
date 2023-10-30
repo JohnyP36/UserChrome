@@ -59,6 +59,9 @@ menupopup > menu {
   menupopup {
     --panel-padding: var(--panel-padding-block) var(--arrowpanel-menuitem-margin-menu) !important;
   }
+  .toolbar-menupopup :is(menu, menuitem) {
+    margin: 0 !important;
+  }
 }
 /*= Sub Menu - Nested Margin ========================================================*/
 menupopup {
