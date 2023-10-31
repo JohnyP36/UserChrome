@@ -39,7 +39,6 @@
       --win-checkbox-checked-hover-bgcolor: rgb(188, 188, 188);
       --win-checkbox-checked-active-bgcolor: rgb(154, 154, 154);
       --win-urlbar-box-hover-bgcolor: rgb(56, 56, 56);
-      --panel-separator-color: rgb(99, 99, 99);
     }
     @supports -moz-bool-pref("userChrome+Content.compatibility.os.win11") {
       :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) {

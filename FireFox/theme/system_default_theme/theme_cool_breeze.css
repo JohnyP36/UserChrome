@@ -114,8 +114,9 @@
 
   /* Fixes for system dark theme */
   @media (prefers-color-scheme: dark) {
-    html {
-      --searchbar-bgcolor: rgb(43, 43, 43) !important;
+    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) toolbarseparator,
+    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) menuseparator::before {
+      border-top: 1px solid rgb(99, 99, 99) !important;
     }
     :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) {
       --toolbarbutton-icon-fill: black !important;
@@ -150,6 +151,10 @@
   /* Fixes for Private browsing */
   toolbar[brighttext] .private-browsing-indicator-icon {
     filter: invert(0) !important;
+  }
+  :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) toolbarseparator,
+  :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) menuseparator::before {
+    border-top: 1px solid rgb(99, 99, 99) !important;
   }
   :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) #navigator-toolbox {
     border-bottom: 1px solid rgb(104, 104, 104) !important;
