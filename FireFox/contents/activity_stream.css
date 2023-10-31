@@ -7,7 +7,7 @@
     --searchbar-bgcolor-hover: rgb(221, 221, 221);
   }
   html[lwt-newtab-brighttext] {
-    --searchbar-bgcolor: rgb(23, 23, 23);
+    --searchbar-bgcolor: rgb(43, 43, 43);
     --searchbar-bgcolor-hover: rgb(61, 61, 61);
   }
   /*= Background - Private Mode ============================= I'VE ADDED =*/

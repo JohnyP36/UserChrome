@@ -54,6 +54,9 @@ menupopup > menu {
   #bookmarks-menu-button menupopup {
     --panel-padding: var(--panel-padding-block) 0 !important;
   }
+  toolbar#PersonalToolbar .bookmark-item {
+    margin: var(--arrowpanel-menuitem-margin-bookmark) !important;
+  }
 }
 /*= Sub Menu - Nested Margin ========================================================*/
 menupopup {
