@@ -1,5 +1,5 @@
 /** Roundings ************************************************************************/
-@supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
   @-moz-document url-prefix("about:"),
                  regexp "^chrome:\/\/\\w+\/content\/.*\.xhtml$") {
     button:not(.toggle-button),
@@ -43,7 +43,7 @@
     }
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_dialog") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_dialog") {
   @-moz-document url("about:home"),
                  url("about:newtab") {
     .modal {
@@ -51,7 +51,7 @@
     }
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_checklabel") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_checklabel") {
   @-moz-document url-prefix("about:"),
                  regexp "^chrome:\/\/\\w+\/content\/.*\.xhtml$") {
     input[type="checkbox"]:not(.toggle-button),
@@ -60,7 +60,7 @@
     }
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
   @-moz-document url-prefix("about:"),
                  regexp "^chrome:\/\/\\w+\/content\/.*\.xhtml$") {
     input:is([type="color"], [type="email"], [type="tel"], [type="text"], [type="password"], [type="url"], [type="number"]),
@@ -97,7 +97,7 @@
     }
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_menupopup") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_menupopup") {
   @-moz-document url-prefix("about:"),
                  url-prefix("chrome://") {
     panel,
@@ -128,7 +128,7 @@
       border-radius: 0 !important;
     }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_infobox") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_infobox") {
   @-moz-document url-prefix("about:"), regexp("^chrome://\\w+/content/.*.xhtml$") {
     /*
      * .container is inside shadow DOM,
@@ -158,7 +158,7 @@
     }
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_dialog") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_dialog") {
   @-moz-document url-prefix("about:"), regexp(".*.pdf$") {
     dialog,
     .dialogBox {
@@ -169,7 +169,7 @@
 @-moz-document url("chrome://browser/content/places/places.xhtml") {
   /*= Library ============================================================*/
   /* Same as rounding/index.css --> Library */
-  @supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+  @media (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
     #placesToolbar > toolbarbutton,
     #placesMenu > menu,
     #editBookmarkPanelRows .expander-up,
@@ -177,7 +177,7 @@
       border-radius: 0 !important;
     }
   }
-  @supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+  @media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
     #searchFilter,
     #detailsPane html|input,
     #places input #editBMPanel_tagsSelectorRow > richlistbox {

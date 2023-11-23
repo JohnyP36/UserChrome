@@ -1,10 +1,10 @@
 /** Rounding ************************************************************************/
-@supports -moz-bool-pref("userChrome+Content.rounding.square_tab") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_tab") {
   :root {
     --tab-border-radius: 0 !important; /* Original: 4px */
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
   :root {
     --urlbar-icon-border-radius: 0 !important; /* Original: calc(var(--toolbarbutton-border-radius) - 1px); */
   }
@@ -29,25 +29,25 @@
     border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_tab") or -moz-bool-pref("userChrome+Content.rounding.square_button") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_tab") or (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
   /* Fix Tab bar button radius */
   #TabsToolbar .toolbarbutton-1:not(#tabs-newtab-button),
   .tab-close-button {
     --tab-border-radius: var(--toolbarbutton-border-radius);
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_panel") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_panel") {
   :root {
     --arrowpanel-border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_panelitem") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_panelitem") {
   :root {
     --arrowpanel-menuitem-border-radius: 0 !important;
     --subviewbutton-border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_menupopup") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_menupopup") {
   :root {
     --panel-border-radius: 0 !important;
     --arrowpanel-border-radius: 0 !important;
@@ -57,7 +57,7 @@
     border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_menuitem") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_menuitem") {
   xul|menulist:not([native]),
   xul|menulist > xul|menupopup xul|menu,
   xul|menulist > xul|menupopup xul|menuitem,
@@ -65,12 +65,12 @@
     border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_infobox") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_infobox") {
   #sanitizeEverythingWarningBox {
     border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_toolbar") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_toolbar") {
   :root {
     --uc-rounding-toolbar: 0;
   }
@@ -80,7 +80,7 @@
     border-radius: var(--uc-rounding-toolbar) !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
   input:not([type="radio"], [type="checkbox"]),
   textarea,
   select,
@@ -99,20 +99,20 @@
     --toolbarbutton-border-radius: 0;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_dialog") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_dialog") {
   dialog,
   .dialogBox {
     border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_checklabel") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_checklabel") {
   input[type="checkbox"],
   .checkbox-check {
     border-radius: 0 !important;
   }
 }
 /*= Library ============================================================*/
-@supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
   #placesToolbar > toolbarbutton,
   #placesMenu > menu,
   #editBookmarkPanelRows .expander-up,
@@ -120,17 +120,17 @@
     border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
   #searchFilter,
   #detailsPane html|input,
   #places input #editBMPanel_tagsSelectorRow > richlistbox {}
-@supports -moz-bool-pref("userChrome+Content.rounding.square_checklabel") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_checklabel") {
   .checkbox-check {
     border-radius: 0 !important;
   }
 }
 /*= Library ============================================================*/
-@supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
   #placesToolbar > toolbarbutton,
   #placesMenu > menu,
   #editBookmarkPanelRows .expander-up,
@@ -138,7 +138,7 @@
     border-radius: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+@media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
   #searchFilter,
   #detailsPane html|input,
   #places input #editBMPanel_tagsSelectorRow > richlistbox {
