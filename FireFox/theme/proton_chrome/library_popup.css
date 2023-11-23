@@ -103,7 +103,7 @@
       border-radius: 4px !important;
       margin-inline-end: 2px !important;
     }
-    @supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+    @media (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
       #placesMenu > menu {
         border-radius: 0 !important;
       }
@@ -134,7 +134,7 @@
       padding-block: 2px !important;
       min-height: 24px !important;
     }
-    @supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+    @media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
       #searchFilter,
       #detailsPane html|input {
         border-radius: 0 !important;
@@ -281,7 +281,7 @@
       -moz-context-properties: fill !important;
       fill: currentColor !important;
     }
-    @supports -moz-bool-pref("userChrome+Content.rounding.square_button") {
+    @media (-moz-bool-pref: "userChrome+Content.rounding.square_button") {
       #editBookmarkPanelRows .expander-up,
       #editBookmarkPanelRows .expander-down {
         border-radius: 0 !important;
@@ -320,7 +320,7 @@
       min-height: 20px !important;
       padding-inline: 4px !important;
     }
-    @supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+    @media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
       #places input {
         border-radius: 0 !important;
       }
@@ -343,7 +343,7 @@
       border: 1px solid var(--organizer-border-color) !important;
       border-radius: 4px !important;
     }
-    @supports -moz-bool-pref("userChrome+Content.rounding.square_field") {
+    @media (-moz-bool-pref: "userChrome+Content.rounding.square_field") {
       #editBMPanel_tagsSelectorRow > richlistbox {
         border-radius: 0 !important;
       }

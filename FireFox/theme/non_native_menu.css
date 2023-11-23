@@ -1,5 +1,5 @@
 /** Non Native Menu ******************************************************************/
-@supports -moz-bool-pref("userChrome+Content.theme.non_native_menu") {
+@media (-moz-bool-pref: "userChrome+Content.theme.non_native_menu") {
   @media (-moz-gtk-csd-available) {
     :root {
       /* Override some menu color variables for light browser themes. */
@@ -154,7 +154,7 @@
       min-width: 0 !important;
       min-height: 0 !important;
     }
-    @supports -moz-bool-pref("userChrome+Content.rounding.square_menupopup") {
+    @media (-moz-bool-pref: "userChrome+Content.rounding.square_menupopup") {
       .menupopup-arrowscrollbox[part*="content"] {
         border-radius: 0px !important;
       }

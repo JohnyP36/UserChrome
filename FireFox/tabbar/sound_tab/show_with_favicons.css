@@ -54,7 +54,7 @@
   border-radius: 2px !important; /* same as close button */
 }
 /* Hide muted icon when not soundplaying */
-@supports -moz-bool-pref("userChrome+Content.tab.show_muted_icon_when_soundplaying.only") {
+@media (-moz-bool-pref: "userChrome+Content.tab.show_muted_icon_when_soundplaying.only") {
   tab:not([style^="--soundplaying-removal-delay"]) .tab-icon-overlay[muted] {
     display: none !important;
   }
@@ -62,7 +62,7 @@
     opacity: 0 !important;
   }
 }
-@supports -moz-bool-pref("userChrome+Content.tab.show_(un)muted_icon_pinned") {
+@media (-moz-bool-pref: "userChrome+Content.tab.show_(un)muted_icon_pinned") {
   .tab-icon-stack[pinned]:is([sharing], [soundplaying], [muted]) > .tab-icon-image {
     display: none !important;
   }
