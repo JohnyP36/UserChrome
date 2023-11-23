@@ -11,8 +11,8 @@
     --searchbar-bgcolor-hover: rgb(61, 61, 61);
   }
   /*= Background - Private Mode ============================= I'VE ADDED =*/
-  @supports -moz-bool-pref("userChrome+Content.newTab.image") {
-           /* @supports not -moz-bool-pref("userChrome+Content.zavety") */
+  @media (-moz-bool-pref: "userChrome+Content.newTab.image") {
+           /* @media (not (-moz-bool-pref: "userChrome+Content.zavety")) */
     html.private {
       --searchbar-bgcolor: color-mix(in srgb, rgb(43, 43, 43), transparent 60%) !important;
       --searchbar-bgcolor-hover: color-mix(in srgb, rgb(61, 61, 61), transparent 60%) !important;
@@ -158,7 +158,7 @@
     cursor: pointer;
   }
   /*= Activity Stream - Search Focus Border: like URL ====================*/
-  @supports -moz-bool-pref("userChrome+Content.page.field_border") {
+  @media (-moz-bool-pref: "userChrome+Content.page.field_border") {
     /* At DarkMode, Color */
     body[style*="--newtab-background-color:rgba(28, 27, 34, 1);"],
     body[style*="--newtab-background-color:rgba(42, 42, 46, 1);"],
@@ -171,7 +171,7 @@
       --newtab-focus-border-selected: var(--newtab-focus-border) !important;
       /* Original: #B5D3FF */
     }
-    @supports -moz-bool-pref("userChrome+Content.page.proton_color.dark_blue_accent") {
+    @media (-moz-bool-pref: "userChrome+Content.page.proton_color.dark_blue_accent") {
       body[style*="--newtab-background-color:rgba(28, 27, 34, 1);"],
       body[style*="--newtab-background-color:rgba(42, 42, 46, 1);"],
       body[style*="--newtab-background-color: rgba(42, 42, 46, 1);"],
