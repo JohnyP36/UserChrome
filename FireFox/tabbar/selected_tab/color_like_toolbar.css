@@ -3,6 +3,8 @@
   /* Fix for windows's system default theme. Using --toolbar-bgcolor, --toolbar-bgimage fallback */
   --tab-selected-bgcolor: unset !important; /* Original: rgb(255,255,255); */
   --tab-selected-bgimage: unset !important; /* Above FF v101 */
+  .tab-background:is([selected], [multiselected]) {
+    background-color: var(--tab-selected-bgcolor, var(--toolbar-bgcolor)) !important;
 }
 #tabbrowser-tabs:not([movingtab])
   > #tabbrowser-arrowscrollbox
