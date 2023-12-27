@@ -2,6 +2,7 @@
   :root:is(#main-window):not(:-moz-lwtheme, [privatebrowsingmode=temporary]) {
     --win-component-bgcolor: rgb(163, 198, 218) !important;
   }
+  #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
   .tab-background:is([selected]):not(:-moz-lwtheme, [privatebrowsingmode=temporary]) {
     background-color: rgb(163, 198, 218) !important;
   }
