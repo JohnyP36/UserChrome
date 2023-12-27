@@ -2,7 +2,7 @@
   :root:is(#main-window):not(:-moz-lwtheme, [privatebrowsingmode=temporary]) {
     --win-component-bgcolor: rgb(163, 198, 218) !important;
   }
-  #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+  #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon:not(:-moz-lwtheme, [privatebrowsingmode=temporary]),
   .tab-background:is([selected]):not(:-moz-lwtheme, [privatebrowsingmode=temporary]) {
     background-color: rgb(163, 198, 218) !important;
   }
@@ -153,6 +153,11 @@
 
 
   /* Fixes for Private browsing */
+  :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+  :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) .tab-background:is([selected]) {
+    background-color: rgb(59, 59, 59) !important;
+  }
+  
   toolbar[brighttext] .private-browsing-indicator-icon {
     filter: invert(0) !important;
   }
