@@ -175,7 +175,13 @@
     }
     :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme)
       .urlbarView-row[row-selectable]:not([selected]):hover {
-        background-color: rgb(97, 96, 107) !important;
+        background-color: rgb(69, 69, 69) !important;
+    }
+    :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) .urlbarView-url {
+      color: rgb(117, 182, 232) !important;
+    }
+    :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme, [lwt-toolbar-field-focus-brighttext="true"]) #urlbar-container > #urlbar {
+      --uc-urlbarview-selected-border: rgb(117, 182, 232); !important;
     }
   }
 }
