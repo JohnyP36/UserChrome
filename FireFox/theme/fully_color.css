@@ -1,6 +1,5 @@
 /*= Menu Color ======================================================= I'VE CHANGED =*/
-:root:-moz-lwtheme:is(html#main-window, window:is(#places, #bookmarksPanel, #history-panel))
-  menupopup:not(.in-menulist) {
+:root:-moz-lwtheme:is(html#main-window, window:is(#places, #bookmarksPanel, #history-panel)) menupopup:not(.in-menulist) {
     /* is same as toolbar color https://github.com/mozilla/gecko-dev/blob/master/toolkit/themes/windows/global/global.css#L17-L67 */
     --menu-color: var(--arrowpanel-color, var(--in-content-page-color));
     --menu-background-color: var(--arrowpanel-background, var(--in-content-button-background));
@@ -203,7 +202,7 @@ html|button.ghost-button:not(.semi-transparent):enabled:hover:active {
   --input-color: var(--arrowpanel-color, FieldText);
 }
 /*= Sidebar - Field Color ===========================================================*/
-html[lwt-sidebar] body {
+html[lwt-sidebar]:not(#main-window) body {
   background-color: var(--lwt-sidebar-background-color, Field) !important;
   color: var(--lwt-sidebar-text-color, FieldText) !important;
 }
