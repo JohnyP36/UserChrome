@@ -97,7 +97,7 @@
   --menuitem-image: url("./../images/tab-multiple.svg");
 }
 #toolbar-context-undoCloseTab {
-  /* --menuitem-image: url("./../images/undo.svg"); */
+  --menuitem-image: url("./../images/undo.svg");
 }
 #toggle_toolbar-menubar {
   /* checkbox */
