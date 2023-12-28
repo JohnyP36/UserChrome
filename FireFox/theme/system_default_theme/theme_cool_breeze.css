@@ -139,14 +139,19 @@
     :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) .urlbarView {
        background-color: white;
     }
-    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) .urlbarView-row:not([type="tip"], 
-    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) [type="dynamic"])[selected] > .urlbarView-row-inner, 
-    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) .urlbarView-row-inner[selected] {
+    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) .urlbarView-row, 
+    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) [type="dynamic"])[selected] > .urlbarView-row-inner {
       background-color: white !important;
       color: black !important;
     }
-    :root:not(:-moz-lwtheme, [privarebrowsingmode=temporary]) .urlbarView-row {
-      background-color: transparent !important;
+    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) .urlbarView-row[selected] {
+      background-color: rgb(242, 242, 242) !important;
+    }
+    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) .urlbarView-row-inner[selected] {
+      color: black !important;
+    }
+    :root:not(:-moz-lwtheme, [privatebrowsingmode=temporary]) .urlbarView-url {
+      color: rgb(0, 97, 224) !important;
     }
   }
 
