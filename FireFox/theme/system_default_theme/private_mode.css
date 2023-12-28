@@ -169,6 +169,14 @@
       .tabbrowser-tab:not([selected="true"]):hover > .tab-stack > .tab-content:not([pinned]) {
         color: black !important;
     }
+    :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme)
+      .urlbarView-row[selected] {
+        background-color: rgb(56, 56, 56) !important;
+    }
+    :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme)
+      .urlbarView-row[row-selectable]:not([selected]):hover {
+        background-color: rgb(97, 96, 107) !important;
+    }
   }
 }
 /*= Private Theme Mode =======================================================*/
