@@ -30,9 +30,9 @@
     #nav-bar:has(#nav-bar-customization-target toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]):nth-last-child(2), 
     toolbaritem[cui-areatype="toolbar"]:not([hidden="true"], #urlbar-container):nth-last-child(1)) 
     #PanelUI-button::after {
-        top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
-        height: calc(var(--urlbar-toolbar-height) / 2.25) !important;
-        background-color: rgb(126, 153, 168) !important;
+      top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
+      height: calc(var(--urlbar-toolbar-height) / 2.25) !important;
+      background-color: rgb(126, 153, 168) !important;
   }
 
   /* Color of right mouse and other popup menu's  (counter toolbarbutton color) --> needed to change fully_color.css */
@@ -157,11 +157,10 @@
 
 
   /* Fixes for Private browsing */
-  :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+  /*:root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) #TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
   :root[privatebrowsingmode=temporary]:not(:-moz-lwtheme) .tab-background:is([selected]) {
     background-color: rgb(59, 59, 59) !important;
-  }
-  
+  }*/
   toolbar[brighttext] .private-browsing-indicator-icon {
     filter: invert(0) !important;
   }
@@ -202,8 +201,8 @@
     #nav-bar:has(#nav-bar-customization-target toolbarbutton[cui-areatype="toolbar"]:not([hidden="true"]):nth-last-child(2), 
     toolbaritem[cui-areatype="toolbar"]:not([hidden="true"], #urlbar-container):nth-last-child(1)) 
     #PanelUI-button::after {
-        top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
-        height: calc(var(--urlbar-toolbar-height) / 2.25) !important;
-        background-color: rgb(91, 91, 91) !important;
+      top: calc(var(--urlbar-toolbar-height) / 3.5) !important; 
+      height: calc(var(--urlbar-toolbar-height) / 2.25) !important;
+      background-color: rgb(91, 91, 91) !important;
   }
 }
