@@ -161,8 +161,8 @@
     html[privatebrowsingmode=temporary]:not(:-moz-lwtheme) {
       color-scheme: dark;
     }
-    html[privatebrowsingmode=temporary]:not(:-moz-lwtheme)
-      menupopup, panel {
+    html[privatebrowsingmode=temporary]:not(:-moz-lwtheme) menupopup, 
+    html[privatebrowsingmode="temporary"]:not(:-moz-lwtheme) panel {
         color-scheme: dark !important;
         --toolbar-color-scheme: dark !important;
     }
